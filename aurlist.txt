@@ -1,0 +1,10 @@
+anitui
+catppuccin-gtk-theme-mocha
+cmatrix-git
+google-chrome
+tetrio-desktop
+ttf-tahoma
+vesktop
+vscodium
+yay
+yay-debug
