@@ -1,5 +1,7 @@
-vim.keymap.set("n", "<S-l>", ":BufferLineCycleNext<CR>")
-vim.keymap.set("n", "<S-h>", ":BufferLineCyclePrev<CR>")
+vim.keymap.set("n", "<S-l>", "<Cmd>:BufferLineCycleNext<CR>")
+vim.keymap.set("n", "<S-h>", "<Cmd>:BufferLineCyclePrev<CR>")
+
+local builtin = require("telescope.builtin")
 
 vim.keymap.set("n", "<leader>ff", builtin.find_files)
 vim.keymap.set("n", "<leader>fg", builtin.live_grep)

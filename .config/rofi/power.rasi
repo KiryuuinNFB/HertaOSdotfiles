@@ -1,0 +1,111 @@
+@theme "catppuccin-default"
+
+
+
+configuration {
+font:							"FantasqueSansMono Nerd Font 14";
+
+  timeout {
+      action: "kb-cancel";
+      delay:  0;
+  }
+  filebrowser {
+      directories-first: true;
+      sorting-method:    "name";
+  }
+}
+
+window {
+    background-color:               @background;
+    text-color:                     @foreground;
+    border-radius:                  0px;
+    border-color:                   @lightbg;
+    height:                         42%;
+    width:                          101%;
+    location:                       center;
+    x-offset:                       0;
+    y-offset:                       0;
+    margin: 0px;
+    padding: 0px;
+    
+    
+}
+
+inputbar {
+	children: 						[ textbox-prompt-colon, prompt ];
+    background-color:               @lightbg;
+    text-color:                     @foreground;
+    expand:                         false;
+    border:                  		0% 0% 0% 0%;
+    border-radius:                  18px;
+    margin:                         0% 59.3% 0% 0%;
+    padding:                        0.5%;
+    position:                       center;
+}
+
+listview {
+    background-color:               @lightbg;
+    margin:                         0px;
+    spacing:                        3%;
+    cycle:                          true;
+    dynamic:                        true;
+    layout:                         horizontal;
+
+    
+    
+}
+
+mainbox {
+    background-color:               @background;
+    children:                       [ inputbar, listview ];
+    spacing:                        5%;
+    padding:                        5% 5% 5% 5%;
+    
+    
+}
+
+element {
+    background-color:               @background;
+    text-color:                     @foreground;
+    orientation:                    horizontal;
+    border-radius:                  25px;
+    
+    
+}
+
+element selected {
+    background-color:               @rosewater;
+}
+
+element-text {
+	font:							"feather 64";
+    expand:                         true;
+    horizontal-align:               0.5;
+    vertical-align:                 0.5;
+    margin: 5%;
+    text-color:                     @foreground;
+}
+
+element-text selected{
+    text-color:                     @background;
+    expand:                         true;
+    horizontal-align:               0;
+    vertical-align:                 0.5;
+    margin:                         0% 0.25% 0% 0.25%;
+}
+
+
+element selected.urgent {
+    background-color:               @urgent;
+    text-color:                     @lightfg;
+}
+
+element normal.normal {
+    background-color: @background;
+    text-color: @foreground;
+}
+
+element alternate.normal {
+    background-color: @background;
+    text-color: @foreground;
+}

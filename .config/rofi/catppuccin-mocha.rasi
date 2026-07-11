@@ -19,11 +19,10 @@
   overlay2: #9399b2;
   overlay1: #7f849c;
   overlay0: #6c7086;
-  surface2: #585b70;
-  surface1: #45475a;
-  surface0: #313244;
+  surface2: #585b7055;
+  surface1: #45475a55;
+  surface0: #31324455;
   base: #1e1e2e55;
-  mantle: #18182555;
+  mantle: #18182500;
   crust: #11111b55;
 }
-
