@@ -10,5 +10,9 @@ return {
         })
 
         vim.cmd.colorscheme("catppuccin")
+
+	vim.api.nvim_set_hl(0, "WinSeparator", {
+            fg = "#cba6f7",
+        })
     end,
 }
