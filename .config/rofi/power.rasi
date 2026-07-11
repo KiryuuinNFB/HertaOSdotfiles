@@ -18,8 +18,9 @@ font:							"FantasqueSansMono Nerd Font 14";
 window {
     background-color:               @background;
     text-color:                     @foreground;
+    border: 2px;
     border-radius:                  0px;
-    border-color:                   @lightbg;
+    border-color:                   @yellow;
     height:                         42%;
     width:                          101%;
     location:                       center;
