@@ -19,11 +19,11 @@
   alternate-normal-foreground: @background;
   urgent-background:           @background;
   selected-normal-foreground:  @background;
-  active-foreground:           @blue;
+  active-foreground:           @mauve;
   background:                  @base;
-  selected-active-background:  @blue;
+  selected-active-background:  @mauve;
   active-background:           @background;
-  selected-normal-background:  @rosewater;
+  selected-normal-background:  @yellow;
   alternate-normal-background: @lightbg;
   foreground:                  @text;
   selected-urgent-foreground:  @background;
@@ -105,7 +105,7 @@ textbox {
 }
 listview {
     padding:      2px 0px 0px ;
-    scrollbar:    true;
+    scrollbar:    false;
     border-color: @separatorcolor;
     spacing:      2px ;
     fixed-height: 0;
@@ -145,7 +145,7 @@ textbox-num-sep {
     text-color: Gray;
 }
 inputbar {
-    padding:    1px ;
+    padding:    16px ;
     spacing:    0px ;
     text-color: @normal-foreground;
     children:   [ "prompt","textbox-prompt-colon","entry","num-filtered-rows","textbox-num-sep","num-rows","case-indicator" ];
