@@ -1,0 +1,48 @@
+{
+    "image-visibility": "when-available",
+    "positionX": "right",
+    "positionY": "bottom",
+    "fit-to-screen": false,
+    "control-center-positionX": "left",
+    "control-center-positionY": "top",
+    "control-center-width": 500,
+    "control-center-height": 700,
+    "layer": "overlay",
+    "notification-icon-size": 64,
+    "notification-window-width": 500,
+    "control-center-margin-top": 10,
+    "control-center-margin-bottom": 20,
+    "control-center-margin-right": 20,
+    "control-center-margin-left": 8,
+    "widgets": [
+        "title",
+        "buttons-grid",
+        "notifications"
+    ],
+    "widget-config": {
+        "title": {
+            "text": "HertaOS | Control Center",
+            "clear-all-button": false,
+            "button-text": "Clear All"
+        },
+        "label": {
+            "max-lines": 5,
+            "text": "Label Text"
+        },
+        "buttons-grid": {
+            "actions": [
+                {
+                    "label": "⏻",
+                    "command": "~/.config/waybar/power.sh",
+                    "tooltip": "Power Off"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "sound-script": {
+            "exec": "exec ~/.config/hertaos/audio/noti.sh",
+            "run-on": "receive"
+        }
+    }
+}

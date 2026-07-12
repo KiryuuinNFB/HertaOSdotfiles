@@ -93,9 +93,8 @@ hl.config({
         border_size = 2,
 
         col = {
-            active_border   = { colors = {"#9f5ed8", "#a16ec0"}, angle = 45 },
-            inactive_border = "rgba(595959aa)",
-        },
+            active_border   = { colors = {"#f5e0dc", "#fab387"}, angle = 45 },
+            inactive_border = { colors = {"#9f5ed8", "#a16ec0"}, angle = 45 },       },
 
         -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
         resize_on_border = true,
@@ -145,7 +144,7 @@ hl.curve("easy",           { type = "spring", mass = 1, stiffness = 71.2633, dam
 
 hl.animation({ leaf = "global",        enabled = true,  speed = 10,   bezier = "default" })
 hl.animation({ leaf = "border",        enabled = true,  speed = 5.39, bezier = "easeOutQuint" })
-hl.animation({ leaf = "windows",       enabled = true,  speed = 10, spring = "easy" })
+hl.animation({ leaf = "windows",       enabled = true,  speed = 10,   spring = "easy" })
 hl.animation({ leaf = "windowsIn",     enabled = true,  speed = 4.1,  spring = "easy",         style = "popin 67%" })
 hl.animation({ leaf = "windowsOut",    enabled = true,  speed = 1.49, spring = "easy",       style = "popin 67%" })
 hl.animation({ leaf = "fadeIn",        enabled = true,  speed = 1.73, bezier = "almostLinear" })
@@ -263,7 +262,9 @@ hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
-hl.bind(mainMod .. " + SHIFT + L", hl.dsp.layout("togglesplit"))    -- dwindle only
+hl.bind(mainMod .. " + SHIFT + P", hl.dsp.layout("togglesplit"))    -- dwindle only
+
+hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("swaync-client -t"))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + H",  hl.dsp.focus({ direction = "left" }))
@@ -289,8 +290,8 @@ hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("hyprshot -m region"))
 hl.bind(mainMod .. " + SHIFT + X", hl.dsp.exec_cmd("pkill waybar && waybar"))
 
 -- Scroll through existing workspaces with mainMod + scroll
-hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" }))
+hl.bind(mainMod .. " + D", hl.dsp.focus({ workspace = "r+1" }))
+hl.bind(mainMod .. " + A",   hl.dsp.focus({ workspace = "r-1" }))
 
 -- Move/resize windows with mainMod + LMB/RMB and dragging
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true })
@@ -346,13 +347,21 @@ hl.window_rule({
 
 hl.layer_rule({
     name  = "noti",
-    match = { namespace = "notifications" },
+    match = { namespace = "swaync-control-center" },
     blur         = true,
-    ignore_alpha = 0.5,
-    animation    = "slide"
+    ignore_alpha = 0.3,
+    animation    = "slide top"
     
 })
 
+hl.layer_rule({
+    name  = "noti2",
+    match = { namespace = "swaync-notification-window" },
+    blur         = true,
+    ignore_alpha = 0.3,
+    animation    = "slide"
+    
+})
 hl.layer_rule({
     match        = { namespace = "rofi" },
     blur         = true,
