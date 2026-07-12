@@ -230,6 +230,7 @@ scrollbar trough {
 
 /* mpris */
 .widget-mpris-player {
+  margin:16px;
   background: #313244;
   border-radius: 12.6px;
   color: #cdd6f4;
@@ -300,6 +301,10 @@ scrollbar trough {
   font-size: 2rem;
 }
 
+.control-center .widget-label>label:hover {
+  color: #f9e2af;
+  font-size: 2.5rem;
+}
 .widget-buttons-grid {
   padding-top: 1rem;
 }
