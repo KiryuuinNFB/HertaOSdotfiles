@@ -47,7 +47,7 @@ local menu        = "rofi -show drun -theme ~/.config/rofi/launcher.rasi"
 --
 hl.on("hyprland.start", function () 
    hl.exec_cmd("nm-applet")
-   hl.exec_cmd("waybar & awww-daemon")
+   hl.exec_cmd("waybar & awww-daemon & swaync")
    hl.exec_cmd("~/.config/hertaos/audio/hertastart.sh")
  end)
 
@@ -140,7 +140,7 @@ hl.curve("linear",         { type = "bezier", points = { {0, 0},       {1, 1}   
 hl.curve("almostLinear",   { type = "bezier", points = { {0.5, 0.5},   {0.75, 1}    } })
 hl.curve("quick",          { type = "bezier", points = { {0.15, 0},    {0.1, 1}     } })
 hl.curve("invincible",     { type = "spring", mass = 1, stiffness = 70, dampening = 1 })
-hl.curve("easy",           { type = "spring", mass = 1, stiffness = 71.2633, dampening = 15.8273644 })
+hl.curve("easy",           { type = "spring", mass = 1, stiffness = 500, dampening = 45 })
 
 hl.animation({ leaf = "global",        enabled = true,  speed = 10,   bezier = "default" })
 hl.animation({ leaf = "border",        enabled = true,  speed = 5.39, bezier = "easeOutQuint" })
@@ -156,8 +156,8 @@ hl.animation({ leaf = "layersOut",     enabled = true,  speed = 1.5,  bezier = "
 hl.animation({ leaf = "fadeLayersIn",  enabled = true,  speed = 1.79, bezier = "almostLinear" })
 hl.animation({ leaf = "fadeLayersOut", enabled = true,  speed = 1.39, bezier = "almostLinear" })
 hl.animation({ leaf = "workspaces",    enabled = true,  speed = 1.94, bezier = "almostLinear", style = "fade" })
-hl.animation({ leaf = "workspacesIn",  enabled = true,  speed = 1.21, spring = "easy", style = "slidefade" })
-hl.animation({ leaf = "workspacesOut", enabled = true,  speed = 1.94, spring = "easy", style = "slidefade" })
+hl.animation({ leaf = "workspacesIn",  enabled = true,  speed = 3, spring = "easy", style = "slide" })
+hl.animation({ leaf = "workspacesOut", enabled = true,  speed = 3, spring = "easy", style = "slide" })
 hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 7,    bezier = "quick" })
 
 -- Ref https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
