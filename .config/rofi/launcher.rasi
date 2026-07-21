@@ -8,7 +8,7 @@
  */
 
 configuration {
-	font:							"FantasqueSansMono Nerd Font 12";
+	font:							"DIN 12";
     show-icons:                     true;
 	icon-theme: 					"Papirus";
     display-drun: 					"  ";
@@ -73,8 +73,8 @@ inputbar {
 listview {
     background-color:               @al;
     padding:                        10px;
-    columns:                        2;
-    lines:                          10;
+    columns:                        1;
+    lines:                          5;
     spacing:                        0%;
     cycle:                          false;
     dynamic:                        true;

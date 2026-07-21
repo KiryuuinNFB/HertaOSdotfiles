@@ -38,7 +38,7 @@
             "actions": [
                 {
                     "label": "⏻",
-                    "command": "~/.config/waybar/power.sh",
+                    "command": "bash -c '~/.config/waybar/power.sh'",
                     "tooltip": "Power Options"
                 },
                 {
@@ -50,7 +50,13 @@
                     "label": "󰣆",
                     "command": "rofi -show drun -theme ~/.config/rofi/launcher.rasi",
                     "tooltip": "Application Launcher"
+                },
+                {
+                    "label": "󰣇",
+                    "command": "google-chrome-stable https://archlinux.org/news/",
+                    "tooltip": "Arch News"
                 }
+
 
             ]
         }

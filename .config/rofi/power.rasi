@@ -3,7 +3,7 @@
 
 
 configuration {
-font:							"FantasqueSansMono Nerd Font 14";
+font:							"DIN 20";
 
   timeout {
       action: "kb-cancel";
