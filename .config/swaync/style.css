@@ -1,7 +1,7 @@
 * {
   all: unset;
   font-size: 13px;
-  font-family: "DIN", "JetBrainsMono Nerd Font";
+  font-family: "DIN", "Noto Serif Thai Looped", "JetBrainsMono Nerd Font";
   transition: 200ms;
 }
 
@@ -42,7 +42,7 @@ trough {
   border-color: #b4befe;
   border-radius: 12.6px;
   margin: 4px;
-  background: #181825;
+  background: #11111b99;
   color: #cdd6f4;
   padding: 0;
 }
@@ -138,7 +138,7 @@ trough {
 .control-center {
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.8), inset 0 0 0 1px #313244;
   border-radius: 12.6px;
-  background-color: #1e1e2e;
+  background-color: #11111b99;
   color: #cdd6f4;
   padding: 0px;
   border: 2px solid;
