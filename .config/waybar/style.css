@@ -1,10 +1,10 @@
 /* --- Global Styles --- */
 * {
   font-family: 'DIN', 'NotoSans Nerd Font', sans-serif;
-  font-size: 13px;
+  font-size: 12px;
   min-height: 0;
-  padding-right: 4px;
-  padding-left: 4px;
+  padding-right: 0px;
+  padding-left: 0px;
   padding-bottom: 0px;
 }
 
@@ -13,7 +13,7 @@
   background: transparent;
   color: #cdd6f4;
   margin: 0px;
-  font-weight: 500;
+  font-weight: 200;
 }
 
 /* --- Left Modules (Individual, Fully Rounded Blocks - With Horizontal Spacing & Simple Hover) --- */
@@ -21,34 +21,40 @@
 #workspaces,
 #custom-arch,
 #custom-btop {
-  background-color: #1e1e2e;
-  padding: 0.3rem 0.7rem;
-  margin: 2px 2px; /* 5px top/bottom margin, 0px left/right (base for individual control) */
-  border-radius: 6px; /* These modules are always rounded */
-  box-shadow: none;
+  background-color: #11111b;
+  padding: 0rem 0rem 0rem 0rem;
+  margin: 5px 0px;
+  border-radius: 6;
   min-width: 0;
-  border: none;
-  /* Transition for background-color and color only */
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+#custom-arch {
+  margin-left: 10px;
+}
+
+#custom-btop {
+  padding: 0.1rem 0.5rem 0.1rem 0.5rem;
 }
 
 #workspaces {
   padding: 2px;
-  margin-left: 5px; /* Margin from the far left edge */
-  margin-right: 2px; /* Spacing after the workspaces module */
+  margin-left: 4px; /* Margin from the far left edge */
+  margin-right: 4px; /* Spacing after the workspaces module */
 }
 
 /* Simple Hover effects for individual left modules - BRIGHTER COLOR */
 
 #custom-arch:hover,
-#cpu:hover {
+#custom-btop:hover {
   background-color: rgb(41, 42, 53); /* Brighter highlight */
+  color: #cba6f7;
 }
 
 #workspaces button {
   color: #cdd6f4;
   border-radius: 5px; /* Workspaces buttons are always rounded */
-  padding: 0.3rem 0.6rem;
+  padding: 0.2rem 1rem 0.2rem 1rem;
   background: transparent;
   transition: all 0.2s ease-in-out;
   border: none;
@@ -63,24 +69,25 @@
 
 #workspaces button:hover {
   background: rgb(41, 42, 53); /* Reference bright hover color */
-  color: #c6d0f5;
+  color: #cba6f7;
 }
 
 /* --- Center Module (Individual, Fully Rounded Block - With Simple Hover) --- */
 #clock {
-  background-color: #1e1e2e;
-  padding: 0.3rem 0.7rem;
-  margin: 5px 0px;
-  border-radius: 6px; /* This module is always rounded */
+  font-size: 12px;
+  background-color: #11111b;
+  padding: 0rem 0.5rem 0rem 0.5rem;
+  margin: 5  ;
+  border-radius: 6; /* This module is always rounded */
   box-shadow: none;
   min-width: 0;
-  border: none;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 /* Simple Hover effect for clock module - BRIGHTER COLOR */
 #clock:hover {
   background-color: rgb(41, 42, 53); /* Brighter highlight */
+  color: #cba6f7;
 }
 
 /* --- Right Modules (Single, Seamless Bar ) --- */
@@ -91,13 +98,12 @@
 #battery,
 #language,
 #tray {
-  background-color: #1e1e2e;
-  padding: 0.3rem 0.7rem;
+  background-color: #11111b;
+  padding: 0.1rem 0.5rem 0.1rem 0.5rem;
   margin: 5px 0px;
   border-radius: 0;
   box-shadow: none;
   min-width: 0;
-  border: none;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
@@ -109,18 +115,21 @@
 #language:hover,
 #tray:hover {
   background-color: rgb(41, 42, 53);
+  color: #cba6f7;
 }
 
 #network {
+  padding-left: 1rem;
   margin-left: 0px; 
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
 }
 
 #pulseaudio {
+  padding-right: 1rem;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
-  margin-right: 4px;
+  margin-right: 10px;
 }
 
 #cpu {
@@ -171,7 +180,7 @@
 }
 
 #custom-arch {
-  font-size: 24px;
+  font-size: 20px;
   padding: 0;
   padding-left: 4;
   padding-right: 4;
@@ -179,12 +188,12 @@
 
 /* --- Tooltip Styles --- */
 tooltip {
-  background-color: #1a1b26;
+  background-color: #11111b;
   color: #dddddd;
-  padding: 10px 12px;
-  margin: 5px 0px;
-  border-radius: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 4px;
+  border: none;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  font-size: 12px;
+  font-size: 24px;
 }
