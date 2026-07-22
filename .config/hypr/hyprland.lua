@@ -42,6 +42,7 @@ local menu = "rofi -show drun -theme ~/.config/rofi/launcher.rasi"
 -- Or execute your favorite apps at launch like this:
 --
 hl.on("hyprland.start", function()
+    hl.exec_cmd("hyprpm reload")
     hl.exec_cmd("nm-applet")
     hl.exec_cmd("waybar & awww-daemon & swaync")
     hl.exec_cmd("~/.config/hertaos/audio/hertastart.sh")
@@ -466,6 +467,13 @@ if hl.plugin.darkwindow ~= nil then
 
     hl.window_rule({
         match = {class = "codium"},
+        ["darkwindow:shade"] = "frosted"
+
+    })
+    
+
+    hl.window_rule({
+        match = {class = "io.github.v81d.Wattage"},
         ["darkwindow:shade"] = "frosted"
 
     })

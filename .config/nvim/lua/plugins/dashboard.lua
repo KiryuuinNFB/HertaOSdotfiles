@@ -1,0 +1,86 @@
+return {
+    "nvimdev/dashboard-nvim",
+    event = "VimEnter",
+
+    config = function()
+
+        local logo = {
+            "",
+            "",
+            "",
+                                                                        
+" █████   █████                     █████              █████ ██████████   ██████████",
+"░░███   ░░███                     ░░███              ░░███ ░░███░░░░███ ░░███░░░░░█",
+" ░███    ░███   ██████  ████████  ███████    ██████   ░███  ░███   ░░███ ░███  █ ░ ",
+" ░███████████  ███░░███░░███░░███░░░███░    ░░░░░███  ░███  ░███    ░███ ░██████   ",
+" ░███░░░░░███ ░███████  ░███ ░░░   ░███      ███████  ░███  ░███    ░███ ░███░░█   ",
+" ░███    ░███ ░███░░░   ░███       ░███ ███ ███░░███  ░███  ░███    ███  ░███ ░   █",
+" █████   █████░░██████  █████      ░░█████ ░░████████ █████ ██████████   ██████████",
+"░░░░░   ░░░░░  ░░░░░░  ░░░░░        ░░░░░   ░░░░░░░░ ░░░░░ ░░░░░░░░░░   ░░░░░░░░░░ ",
+"",
+"",
+"",
+        }
+
+        local buttons = {
+            {
+                icon = " ",
+                icon_hl = "Type",
+                desc = "New File",
+                desc_hl = "Keyword",
+                key = "n",
+                action = "ene | startinsert"
+            }, {
+                icon = " ",
+                icon_hl = "Type",
+                desc = "Search",
+                desc_hl = "Keyword",
+                key = "f",
+                action = "Telescope find_files"
+            }, 
+            {
+                icon = "󰱼 ",
+                icon_hl = "Type",
+                desc = "HertaOS Dotfiles",
+                desc_hl = "Keyword",
+                key = "d",
+                action = "cd ~/.dotfiles | Telescope find_files"
+            },
+
+            {
+                icon = " ",
+                icon_hl = "Type",
+                desc = "Plugin Manager",
+                desc_hl = "Keyword",
+                key = "l",
+                action = "Lazy"
+            },
+
+            {
+                icon = " ",
+                icon_hl = "Type",
+                desc = "Exit",
+                desc_hl = "Keyword",
+                key = "q",
+                action = "qa"
+            }
+        }
+
+        require("dashboard").setup({
+            theme = "doom",
+            config = {
+              header = logo,
+              header_hl = "Special",
+              center = buttons,
+              footer = {
+                "Madam Herta is a peerless gem, Madam Herta is an unrivaled genius, Madam Herta is an inimitable beauty"
+              },
+               vertical_center = true,
+            },
+           
+        })
+
+    end,
+
+    dependencies = {{"nvim-tree/nvim-web-devicons"}}
+}
