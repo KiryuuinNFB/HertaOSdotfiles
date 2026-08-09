@@ -1,7 +1,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[](red)\
+╭─[](red)\
 $os\
 $username\
 [](bg:peach fg:red)\
@@ -23,11 +23,10 @@ $python\
 [](fg:green bg:sapphire)\
 $conda\
 [](fg:sapphire bg:lavender)\
-$time\
-[ ](fg:lavender)\
 $cmd_duration\
+[ ](fg:lavender)\
 $line_break\
-$character"""
+╰──$character"""
 
 palette = 'catppuccin_mocha'
 
@@ -166,11 +165,11 @@ vimcmd_visual_symbol = '[❮](bold fg:yellow)'
 
 [cmd_duration]
 show_milliseconds = true
-format = " in $duration "
+format = '[[  $duration ](fg:crust bg:lavender)]($style)'
 style = "bg:lavender"
 disabled = false 
-show_notifications = true
-min_time_to_notify = 45000
+show_notifications = false
+min_time_to_notify = 0
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
