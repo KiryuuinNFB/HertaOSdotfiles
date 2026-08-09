@@ -74,6 +74,8 @@ truncation_symbol = "…/"
 "Music" = "󰝚 "
 "Pictures" = " "
 "Developer" = "󰲋 "
+"PSCP-69070210" = "󰲋 "
+"~" = "󰘧"
 
 [git_branch]
 symbol = ""
