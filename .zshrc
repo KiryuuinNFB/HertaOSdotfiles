@@ -31,6 +31,7 @@ kitty-reload() {
 
 export BUN_INSTALL="/home/Kiryuuin/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="$HOME/.config/hertaos/bin:$PATH"
 
 eval "$(starship init zsh)"
 fastfetch
