@@ -1,0 +1,31 @@
+#!/bin/env bash
+
+if (( $# == 0)); then
+	echo "Usage: collatz <number>"
+	exit 1
+fi
+
+n=$1
+
+if [[ ! "$n" =~ ^[+-]?[0-9]+$ ]]; then
+	echo "Must be a positive integer"
+	exit 1
+fi
+
+if (($n <= 0)); then
+	echo "Must be a positive integer"
+	exit 1
+elif (($n == 1)); then
+	echo 1
+fi
+
+while (($n != 1)); do
+	sleep 0.01
+	if (( n % 2 == 0)); then
+		n=$((n / 2))
+		echo $n
+	else
+		n=$((3*n + 1))
+		echo $n
+	fi
+done
